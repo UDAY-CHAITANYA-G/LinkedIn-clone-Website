@@ -1,0 +1,1227 @@
+/* ----------------------------font family link from googlr fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Poppins:wght@100;200;300;400;500;600;700&family=Sacramento&display=swap');
+
+/* ---------------------------------basic settings */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background-color: black;
+    color: azure;
+}
+a{
+    text-decoration: none;
+    color: azure;
+}
+.bx{
+    color: azure;
+}
+
+/* ----------------------------------------nav-bar */
+/* ----------------------nav-bar start */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(29, 27, 27);
+    padding: 0px 15%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10 px rgba(182, 181, 181, 0.64);
+    border-bottom: 1px solid rgb(94, 91, 91);
+    position: sticky;
+}
+/* -------------------navbar left */
+.logo .bx{
+    font-size: 2.5rem;
+    margin-right:0.6rem ;
+    display: block;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .search-box{
+    display: flex;
+    align-items: center;
+    background-color: rgb(69, 67, 67);
+    border-radius: 5px;
+    padding:5px 10px;
+    width:200px;
+}
+
+.navbar-left .search-box input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: azure;
+   
+}
+
+/* -----------------navbar right */
+.navbar-right{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right ul{
+    border-right: 1px solid rgb(131, 132, 133);
+}
+.navbar-right ul li{
+    display: inline-block;
+    list-style: none
+}
+.navbar-right ul li .bx{
+    font-size: 1.4rem;
+}
+.navbar-right ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    font-size: 0.7rem;
+    margin: 5px 8px;
+    
+    padding-right: 5px;
+    position: relative;
+}
+.navbar-right ul li  span{
+    margin-left: 4px;
+}
+    
+.navbar-right ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    margin-bottom: -8px;  
+    transition: width 0.5s; 
+}
+.navbar-right ul li a:hover::after,
+.navbar-right ul li a.active::after{
+    width: 100%;
+}
+.navbar-right .online .profile-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 1rem;  
+    margin-right: 1rem; 
+    padding: 3px;
+}
+.online{
+    position: relative;
+    cursor: pointer;
+}
+
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid  rgb(67, 65, 65); 
+    border-radius: 50%;
+    right: 1rem;
+    top: 0;
+    background:#41db51;
+    position: absolute;
+}
+
+.navbar-right .online{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: relative;
+}
+
+.navbar-right .online .me{
+    font-size: 0.7rem;
+}
+/* ---------profle drop down menu */
+.profile-menu-wrap{
+    background-color: rgba(116, 116, 114, 0.989);
+    position: absolute;
+    top:100%;
+    right: 15%;
+    width: 280px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.profile-menu-wrap.open-menu{
+   max-height: 600px;
+}
+
+.profile-menu{
+    color: rgb(188, 190, 193);
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px;
+}
+
+.user-info img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 15px;
+}
+
+.profile-menu h3{
+    font-size: 20px;
+    color: azure;
+    font-weight: 500;
+}
+
+.profile-menu span{
+    font-size: 12.67px;
+    font-weight: 300;
+}
+
+.profile-menu-wrap .profile-view{
+    text-align: center;
+    display: block;
+    margin: 8px;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 20px;
+    color: rgb(188, 190, 193);
+    border:1px solid rgb(188, 190, 193);
+   
+}
+.profile-menu-wrap .profile-view:hover{
+   color: white;
+   border: 1px solid white;
+}
+
+.profile-menu-wrap hr{
+    border: 0;
+    background:  rgb(188, 190, 193);
+    height: 1px;
+}
+
+.profile-menu-wrap .account{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-menu-wrap .account h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(188, 190, 193);
+}
+.profile-menu-wrap .account a{
+    font-size: 13px;
+    color: rgb(188, 190, 193);
+}
+
+.profile-menu-wrap .account .Premium{
+    color: white;
+}
+.profile-menu-wrap .account a:hover{
+    text-decoration: underline;
+    color: white;
+}
+.profile-menu-wrap .sign-out{
+    display: block;
+
+    margin: 10px;
+    color:  rgb(188, 190, 193);
+}
+.profile-menu-wrap .sign-out:hover{
+    color: white;
+}
+/* ---------------------navbar end */
+
+/* -------------------------------------------main-body */
+
+/* ------------------main body start */
+
+.container{
+    padding: 20px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*  -------------------left sidebar */
+.left-sidebar{
+    flex-basis: 20%;
+    align-self: self-start;
+    position: sticky;
+    top: 70px;
+}
+
+
+.sidebar-profile-box{
+    background:  rgb(69, 67, 67);
+    border-radius: 10px;
+}
+.sidebar-profile-info{
+    padding: 0 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sidebar-profile-info img{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    background:  rgb(69, 67, 67);
+    padding: 2px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -45px;
+}
+
+.sidebar-profile-info h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(233, 233, 233);
+}
+
+.sidebar-profile-info h1:hover{
+    text-decoration: underline;
+}
+.sidebar-profile-info h3{
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0px 15px;
+    padding-bottom: 5px;
+    color: rgb(139, 136, 136);
+    border-bottom: 1px solid rgb(139, 136, 136);
+    
+}
+
+.sidebar-profile-info ul{
+    list-style: none;
+    padding: 5px;  
+    width: 100%;
+    border-bottom: 1px solid rgb(139, 136, 136);
+}
+
+.sidebar-profile-info ul li {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: rgb(141, 140, 140);
+   text-align: left;
+}
+
+.sidebar-profile-info ul li:hover{
+    background:   rgb(26, 26, 26);
+}
+.sidebar-profile-info ul li span{
+    float: right;
+    color: rgb(204, 204, 215);
+    margin-left: 1.7rem;
+}
+.sidebar-profile-links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 11px;
+    color: rgb(141, 140, 140);
+    border-bottom: 1px solid;
+}
+.sidebar-profile-links:hover{
+    background:  rgb(26, 26, 26);
+}
+.sidebar-profile-links .line1{
+    font-size: 12px;
+    color:style='color:#ffffff';
+    text-decoration: underline;
+    margin-left: 3px;
+}
+
+.sidebar-profile-links .bx{
+    font-size: 1rem;
+}
+
+.sidebar-profile-links1 {
+    padding: 10px;
+    font-size: 12px;
+    color: rgb(141, 140, 140);
+}
+
+.sidebar-profile-links1:hover{
+    background:  rgb(26, 26, 26);;
+}
+.sidebar-profile-links1 .bx{
+    font-size: 1rem;
+}
+
+.sidebar-profile-links1 span{
+    margin-left: 3px;
+    
+}
+
+
+.sidebar-activity {
+    margin-top: 1rem;
+    padding: 10px;
+    color:  rgb(205, 203, 203);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-activity h3{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.sidebar-activity a{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    font-size: 12px;
+    color: rgb(141, 140, 140);
+}
+.sidebar-activity a:hover{
+    color:  rgb(205, 203, 203);
+    background: rgb(26, 26, 26);
+}
+.sidebar-activity .bx{
+    color: rgb(141, 140, 140);
+}
+.sidebar-activity .bx:hover{
+    color:  rgb(205, 203, 203);
+}
+.sidebar-activity span{
+    margin-left: 0.7rem;
+}
+
+.discover-more-link{
+    text-align: center;
+    border-top: 1px solid;
+    padding-top: 6px;
+    margin-top: 1rem;
+}
+.discover-more-link a{
+    font-size: 14px;
+    color: white;
+}
+
+#show-more-link{
+    display: none;
+}
+
+.left-sidebar .sidebar-news{
+    display: none;
+}
+.left-sidebar .footer{
+    display:none;
+}
+/* -----left-sidebar end */
+
+/* --------------------------------right sidebar */
+
+/* ----------right sidebar start */
+.right-sidebar{
+    flex-basis: 25%;
+    align-self: self-start;
+    position: sticky;
+    top: 70px;
+}
+
+.sidebar-news{
+    background: rgb(69, 67, 67);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.head-section{
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar-news .bx{
+    font-size: 1.3rem;
+}
+.sidebar-news h1{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar-news ul{
+    padding: 5px 15px;
+}
+.sidebar-news ul li{
+    line-height: 15px;
+    margin-bottom: 0.5rem;
+}
+.sidebar-news ul li:hover{
+    background: black;
+ 
+}
+
+.sidebar-news ul li a{
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sidebar-news ul li span{
+    font-size: 11.5px;
+    color: rgb(141, 140, 140); 
+}
+.read-more-link span{
+    font-size: 14x;
+    font-weight: 500;
+    margin-left: 30%;
+    color:rgb(215, 214, 214);
+}
+.read-more-link span:hover{
+    color: white;
+}
+.footer .footer-links{
+    padding: 20px 25px;
+    font-size: 11.5px;
+    text-align: center;
+    line-height: 25px;
+    
+}
+
+.footer-links a{
+    margin-left: 10px;
+    color: rgb(141, 140, 140);    
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.footer .copyright-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left:  15px;
+    padding-right: 15px;
+}
+.copyright-section h3{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.copyright-section .bx{
+    font-size: 13px;
+}
+
+.copyright-section span{
+    margin-left: 10px;
+    font-size: 12px;
+}
+/* ---------right sidebar end */
+
+/* ------------------main-content */
+.main-content{
+    flex-basis: 52%;
+}
+.create-post{
+    background:  rgb(69, 67, 67);
+    padding: 20px 25px 10px;
+    border-radius:5px ;
+}
+.create-post-input{
+   
+    display: flex;
+    align-items: flex-start;
+}
+.create-post-input img{
+    width:45px;
+    height:40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+.create-post-input textarea{
+    width: 100%;
+    border: 0;
+    padding: 5px;
+    outline: 0;
+    resize: none;
+    background: transparent;
+    font-size: 14px;
+    border-radius: 5px;
+    color: azure;
+    background-color: rgb(87, 87, 84);
+}
+
+::placeholder{
+    font-weight: 600;
+}
+
+.create-post-links{
+    display: flex;
+    align-items: flex-start;
+}
+
+.create-post-links li{
+    list-style: none;
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    justify-content: center;
+    margin-top: 13px;
+    cursor: pointer;
+}
+.create-post-links li .bx{
+   font-size: 2rem;
+   color:azure ;
+}
+.create-post-links li span{
+    font-size: 15px;
+    color: azure;
+}
+.sort-by{
+    display: flex;
+    align-items: center;
+    margin: 10px 0; 
+}
+
+.sort-by hr{
+    flex: 1;
+    height: 1px;
+    border:0;
+    background:  rgb(87, 87, 84) ;
+}
+
+.sort-by p{
+    color:  rgb(87, 87, 84);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.sort-by span{
+    color: azure;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.sort-by .bx{
+    font-size: 11px;
+}
+
+.post{
+    background:  rgb(69, 67, 67);
+   border-radius: 5px;
+    margin: 5px 0 15px;
+}
+
+.post-author{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 20px 25px 5px;
+    cursor: pointer;
+}
+
+.post-author img{
+    height: 40px;
+    width: 40px;
+    border-radius:50% ;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.post-author h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(240, 255, 255, 0.793);
+}
+
+.post-author small{
+    font-size: 12px;
+    display: block;
+    color: rgba(240, 255, 255, 0.587);
+    margin-bottom: -2px;
+}
+
+.post-author .author-info:hover{
+    text-decoration: underline;
+    color: azure;
+}
+.post p{
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-top: 0px;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden; */
+}
+
+.post-stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    border-bottom: 1px solid rgb(130, 131, 131);
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.post-stats .bx{
+    font-size: 15px;
+    margin-right: -5px;
+    border-radius: 50%;
+    background: rgb(130, 131, 131) ;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.post-stats div{
+    display: flex;
+    align-items: center;
+}
+
+.liked-users{
+    margin-left: 10px;
+}
+
+.post-stats span{
+    color: rgb(130, 131, 131) ;
+}
+
+.post-stats span:hover{
+    text-decoration: underline;
+    color: azure;
+}
+.post-activity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.post-activity div{
+    display: flex;
+    align-items: center;
+}
+
+.post-activity .bx{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+/* -----------------------user-profile css */
+/* ----------------profile main */
+.profile-main{
+    flex-basis: 73%;
+}
+
+.profile-container{
+    padding: 1px;
+    border-radius: 5px;
+    background: rgb(69, 67, 67);
+}
+.profile-container-inner{
+    padding: 0 4% 10px;
+}
+.profile-pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -105px;
+    padding: 3px;
+    background:  rgb(69, 67, 67);
+    cursor: pointer;
+}
+
+.profile-container h1{
+    font-size: 28px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.816);
+}
+
+.profile-container b{
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.816);
+}
+.profile-container p{
+    margin-top: 5px;
+    color: rgb(135, 135, 132);
+}
+
+.profile-container p a{
+    color: rgba(255, 255, 255, 0.816);
+}
+
+.profile-container p a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.mutual-connections{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+.mutual-connections .bx{
+    font-size: 30px;
+    margin-right: -15px;
+    border-radius: 50%;
+    background: rgb(69, 67, 67);
+    color:  rgb(135, 135, 132);
+}
+
+.mutual-connections span{
+    margin-left: 20px;
+    color:  rgb(135, 135, 132);
+    font-size: 15px;
+    font-weight: 400;
+}
+.mutual-connections span:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.profile-btn{
+    margin: 20px 0;   
+}
+.profile-btn a{
+    display: inline-flex;
+    align-items: center;
+    background: rgb(135, 135, 132);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    border:1px solid white;
+}
+
+.profile-btn a:hover{
+    background:rgb(69, 67, 67);
+}
+.profile-btn .btn1{
+    background: rgb(205, 205, 205);
+    color: rgb(44, 40, 40);
+    font-weight: 600;
+}
+.profile-btn .btn1:hover{
+    background: rgba(205, 205, 205, 0.791);
+}
+
+.profile-btn .btn3{
+    background: none;
+}
+.profile-btn .btn3:hover{
+    background: rgba(17, 8, 8, 0.252);
+}
+
+.profile-description{
+    background: rgb(69, 67, 67);
+    padding: 20px 4% 30px;
+    margin: 12px 0;
+    border-radius: 5px;
+}
+
+.profile-description h2{
+    color: rgba(240, 248, 255, 0.904);
+    font-weight: 500;
+    margin: 10px 0 20px;
+}
+
+.profile-description p{
+    font-size: 14px;
+    color: rgba(240, 248, 255, 0.904);
+}
+.profile-desc-row{
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+.profile-desc-row .bx{
+    font-size: 70px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+.profile-desc-row  div{
+    width: 100%;
+}
+.profile-desc-row h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(240, 248, 255, 0.904);
+}
+.profile-desc-row h3:hover{
+    text-decoration: underline;
+    color: white;
+}
+.profile-desc-row b{
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(240, 248, 255, 0.904);
+}
+
+.profile-desc-row p{
+    font-size: 14px;
+    color:  rgb(135, 135, 132); 
+    font-weight: 400;
+}
+.profile-description hr{
+    border: 0;
+    outline: 0;
+    height: 1px;
+    background:  rgba(120, 120, 119, 0.911);
+}
+
+.experience-link {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-weight: 400;
+}
+
+.experience-link a{
+    display: flex;
+    color:  rgb(174, 174, 171); 
+}
+.experience-link span:hover{
+    text-decoration: underline;
+    color: white;
+}
+.experience-link .bx{
+    font-size: 25px;
+    color:  rgb(174, 174, 171); 
+}
+
+.profile-description .skills {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profile-description .skills a{
+    font-size: 15px;
+    color: rgb(178, 176, 174);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid  rgba(178, 176, 174, 0.732);
+}
+
+.profile-description .skills a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+
+/* ---------------profile sidebar */
+.profile-sidebar{
+    flex-basis: 25%;
+    align-items: flex-start;
+}
+
+.sidebar-people{
+    background: rgb(69, 67, 67);
+    padding: 10px 20px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.sidebar-people h3{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.sidebar-people-row{
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin: 6px 0;
+    border-bottom: 1px solid #5f5f5f;
+}
+
+.sidebar-people-row .bx{
+    font-size: 45px; 
+    cursor: pointer;
+}
+
+.sidebar-people-row h2{
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sidebar-people-row h2:hover{
+    text-decoration: underline;
+}
+
+.sidebar-people-row p{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.sidebar-people-row a{
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 25px;
+    border: 2px solid #5f5f5f;
+    border-radius: 20px;
+   font-weight: 500;
+    color: rgb(203, 200, 200)
+}
+
+.sidebar-people-row a:hover{
+    color: white;
+    border: 1px solid white;
+    background: #5f5f5f;
+}
+.sidebar-people .show-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    font-size: 14px;
+}
+.show-more .bx{
+    font-size: 18px;
+}
+
+
+/*------------------ responsive */
+
+
+
+@media (max-width:610px){
+    .navbar-left .search-box{
+        width: auto;
+        padding: 0;
+    }
+    .search-box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar-right ul li span{
+        display: none;
+    }
+    .navbar-right ul li a{
+        padding: 0;
+        margin: 5px;
+    }
+    .navbar-right ul li a{
+        width: 1rem;
+    }
+    .navbar{
+        padding:0px 10%;
+    }
+    .logo .bx{
+        font-size: 2rem;
+    }
+
+    .container{
+        padding: 15px 3%;
+    }
+    .left-sidebar,.right-sidebar{
+        flex-basis: 100%;
+        position: relative;
+        top: 0px;
+    }
+    .main-content{
+        flex-basis: 100%;
+    }
+    .create-post{
+        margin-top: 10px;
+    }
+    .post-activity{
+        padding: 10px 17px;
+    }
+
+    .profile-main,.profile-sidebar{
+        flex-basis: 100%;
+    }
+    .profile-pic{
+        margin-top: -59px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-container h1{
+        font-size: 20px;
+    }
+
+    .profile-container b,p{
+        font-size: 13px;
+    }
+    .mutual-connections span{
+        font-size: 11px;
+    }
+    .profile-btn a{
+        padding: 3px 6px;
+        border-radius: 20px;
+        margin-right: 6px;
+        font-size: 14px;
+    }
+    .profile-description{
+        font-size: 14px;
+    }
+    .navbar-right .online .me{
+        display: none;
+    }
+    #show-more-link{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .sidebar-activity{
+        display: none;
+    }
+    .sidebar-activity.open-activity{
+        display: block;
+    }
+    .create-post{
+        padding: 12px 9px 10px;
+    }
+    .create-post-links li .bx {
+        font-size: 1.7rem;
+    }
+    .create-post-links li span{
+        display: none;
+    }
+
+    
+}
+
+@media (max-width:1300px){
+    .container{
+        padding: 20px 10%;
+    }
+    .navbar{
+        padding: 0 10%;
+    }
+    .create-post{
+        padding: 12px 9px 10px;
+    }
+    .create-post-links li .bx {
+        font-size: 1.7rem;
+    }
+}
+@media (max-width:1250px){
+    .container{
+        padding: 20px 8%;
+    }
+    .navbar{
+        padding: 0 8%;
+    }
+   
+}
+@media (max-width:1150px){
+    .container{
+        padding: 20px 5%;
+    }
+    .navbar{
+        padding: 0 5%;
+    }
+  
+}
+@media (max-width:1000px){
+    .container{
+        padding: 20px 2%;
+    }
+    .navbar{
+        padding: 0 5%;
+    }
+    .create-post{
+        padding: 12px 9px 10px;
+    }
+    .create-post-links li .bx {
+        font-size: 1.7rem;
+    }
+    .create-post-links li span{
+        display: none;
+    }
+  
+}
+
+
+@media (min-width:611px) and (max-width:900px){
+    .sidebar-profile-info h1{
+        font-size: 15px;
+    }
+
+    .sidebar-activity{
+        display: none;
+    }
+    .sidebar-activity.open-activity{
+        display: block;
+    }
+    .navbar-right ul li span {
+        display: none;
+    }
+    .main-content{
+        flex-basis: 70%;
+    }
+    .left-sidebar{
+        flex-basis: 28%;
+        position:relative;
+        top:0
+    }
+
+    .left-sidebar .sidebar-news {
+        display: block;
+        margin-top: 10px;
+    }
+    .left-sidebar .footer{
+        display: block;
+    }
+    .right-sidebar{
+        display: none;
+    }
+    .read-more-link span {
+        margin-left: 16%;
+    }
+    #show-more-link{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .profile-main {
+        flex-basis:63% ;
+    }
+    .profile-sidebar{
+        flex-basis: 35%;
+    }
+}
+
+
